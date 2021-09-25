@@ -20,7 +20,17 @@ The "stop" button is disabled on the initial screen because the user has not sta
 
 When the user clicks the "play" button, the timer will always start a new focus session.
 
+### Active Session Screen:
+![active session screen](/screenshots/active-session.jpg)
+After the user clicks the "play" button, the buttons to change the focus and break durations are disabled and the session timer appears.
 
+The session timer shows the type of session, either "Focusing" or "On Break," the total duration of the session, the time remaining, and a progress bar to indicate how much of the current session is complete.
+
+### Paused Session Screen:
+![paused session screen](/screenshots/paused-session.jpg)
+If the user clicks on the "pause" button, "PAUSED" appears below the time remaining and the pause button will now be a play button.
+
+Of note, stopping a session will always return the application to the initial screen and the user will be able to change the focus and break durations.
 
 ## Technology
 ### Built with:
