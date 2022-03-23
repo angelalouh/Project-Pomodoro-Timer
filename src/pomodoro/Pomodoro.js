@@ -20,10 +20,10 @@ import ProgressBar from "./ProgressBar";
 function nextTick(prevState, focusDuration, breakDuration) {
   const timeRemaining = Math.max(0, prevState.timeRemaining - 1);
   if (prevState.label === "Focusing") {
-    const timeElapsed = (focusDuration * 60) - timeRemaining;
+    const timeElapsed = focusDuration * 60 - timeRemaining;
     prevState.percentComplete = (timeElapsed / (focusDuration * 60)) * 100;
   } else {
-    const timeElapsed = (breakDuration * 60) - timeRemaining;
+    const timeElapsed = breakDuration * 60 - timeRemaining;
     prevState.percentComplete = (timeElapsed / (breakDuration * 60)) * 100;
   }
   return {
@@ -69,11 +69,11 @@ function Pomodoro() {
 
   // Initial session state:
   const initialSessionState = {
-    label: null, 
-    duration: null, 
-    timeRemaining: null, 
-    percentComplete: null 
-  }
+    label: null,
+    duration: null,
+    timeRemaining: null,
+    percentComplete: null,
+  };
 
   // Declaring the single-state session variable
   const [session, setSession] = useState(initialSessionState);
@@ -96,18 +96,18 @@ function Pomodoro() {
   // PAUSED text appears after pressing the pause button
   const [paused, setPaused] = useState("none");
 
-
   /**
    * Custom hook that invokes the callback function every second
    *
    * NOTE: You will not need to make changes to the callback function
    */
-  useInterval(() => {
+  useInterval(
+    () => {
       if (session.timeRemaining === 0) {
         new Audio("https://bigsoundbank.com/UPLOAD/mp3/1482.mp3").play();
         return setSession(nextSession(focusDuration, breakDuration));
       }
-      
+
       return setSession(nextTick(session, focusDuration, breakDuration));
     },
     isTimerRunning ? 1000 : null
@@ -116,16 +116,16 @@ function Pomodoro() {
   return (
     <div className="pomodoro">
       <DurationButtons
-        focusDuration={focusDuration} 
+        focusDuration={focusDuration}
         setFocusDuration={setFocusDuration}
-        breakDuration={breakDuration} 
+        breakDuration={breakDuration}
         setBreakDuration={setBreakDuration}
-        disableDurationButtons={disableDurationButtons} 
+        disableDurationButtons={disableDurationButtons}
       />
       <div className="row">
         <div className="col">
           <div
-            className="btn-group btn-group-lg mb-2"
+            className="btn-group btn-group-lg mt-5 mb-2"
             role="group"
             aria-label="Timer controls"
           >
@@ -155,7 +155,7 @@ function Pomodoro() {
         </div>
       </div>
       <div>
-        <ProgressText 
+        <ProgressText
           activeSessionStyle={activeSessionStyle}
           session={session}
           paused={paused}

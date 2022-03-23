@@ -5,11 +5,11 @@ function ProgressBar({ activeSessionStyle, session }) {
     <>
       {activeSessionStyle === "block" && (
         // This area will only show when there is an active focus or break - i.e. session is running or is paused
-        <div className="row mb-2">
+        <div className="row mt-2 mb-2">
           <div className="col">
             <div className="progress" style={{ height: "20px" }}>
               <div
-                className="progress-bar"
+                className="progress-bar progress-bar-striped bg-success progress-bar-animated"
                 role="progressbar"
                 aria-valuemin="0"
                 aria-valuemax="100"
