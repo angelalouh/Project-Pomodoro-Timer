@@ -11,6 +11,8 @@ For this project, I implemented a Pomodoro timer that followed these steps (simp
 4. When the focus time expires, an alarm plays and then the break timer starts.
 5. When the break time expires, the alarm plays again and then the focus timer starts.
 
+[Loom Demo Video](https://www.loom.com/share/b960d5378e62436b99cda7448dfef4d6)
+
 ## Screenshots
 ### Initial Screen:
 ![initial screen](/screenshots/starting-screen.png)
@@ -34,4 +36,4 @@ Of note, stopping a session will always return the application to the initial sc
 
 ## Technology
 ### Built with:
-- React, JavaScript, HTML, Bootstrap 4 for styling, and Open-Iconic icons for icons.
+- React, JavaScript, HTML, CSS, Google Fonts, Bootstrap 4, and Open-Iconic icons.
