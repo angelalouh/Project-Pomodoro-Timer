@@ -13,7 +13,6 @@ function StopButton({
   setPaused,
   disableStopButton,
 }) {
-
   const handleStopButtonClick = () => {
     setIsTimerRunning(false);
 
@@ -46,7 +45,7 @@ function StopButton({
       onClick={handleStopButtonClick}
       disabled={disableStopButton}
     >
-      <span className="oi oi-media-stop" />
+      <span className="oi oi-media-stop pt-1" />
     </button>
   );
 }

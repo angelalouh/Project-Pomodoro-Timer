@@ -11,7 +11,6 @@ function PlayPauseButtons({
   focusDuration,
   isTimerRunning,
 }) {
-
   function playPause() {
     // Disable FocusDuration buttons upon pressing play
     setDisableDurationButtons(true);
@@ -59,8 +58,8 @@ function PlayPauseButtons({
       <span
         className={classNames({
           oi: true,
-          "oi-media-play": !isTimerRunning,
-          "oi-media-pause": isTimerRunning,
+          "oi-media-play pt-1": !isTimerRunning,
+          "oi-media-pause pt-1": isTimerRunning,
         })}
       />
     </button>

@@ -8,7 +8,6 @@ function DurationButtons({
   setBreakDuration,
   disableDurationButtons,
 }) {
-
   // Functions to handle decreasing the focus or break duration time:
   const handleMinusFocusDurationClick = () => {
     setFocusDuration((currentFocusDuration) => {
@@ -52,7 +51,7 @@ function DurationButtons({
               onClick={handleMinusFocusDurationClick}
               disabled={disableDurationButtons}
             >
-              <span className="oi oi-minus" />
+              <span className="oi oi-minus mt-1" />
             </button>
             {/* Allows user to increase the focus duration, and disables this button during a focus or break session */}
             <button
@@ -62,7 +61,7 @@ function DurationButtons({
               onClick={handlePlusFocusDurationClick}
               disabled={disableDurationButtons}
             >
-              <span className="oi oi-plus" />
+              <span className="oi oi-plus mt-1" />
             </button>
           </div>
         </div>
@@ -83,7 +82,7 @@ function DurationButtons({
                 onClick={handleMinusBreakDurationClick}
                 disabled={disableDurationButtons}
               >
-                <span className="oi oi-minus" />
+                <span className="oi oi-minus mt-1" />
               </button>
               {/* Allows user to increase the break duration, and disables this button during a focus or break session*/}
               <button
@@ -93,7 +92,7 @@ function DurationButtons({
                 onClick={handlePlusBreakDurationClick}
                 disabled={disableDurationButtons}
               >
-                <span className="oi oi-plus" />
+                <span className="oi oi-plus mt-1" />
               </button>
             </div>
           </div>
