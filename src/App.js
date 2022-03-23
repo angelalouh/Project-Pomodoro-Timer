@@ -4,12 +4,14 @@ import Pomodoro from "./pomodoro/Pomodoro";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header container">
-        <h1>Pomodoro Timer</h1>
-      </header>
-      <div className="container">
-        <Pomodoro />
+    <div className="background-image">
+      <div className="App card">
+        <header className="App-header container pt-5">
+          <h1>Pomodoro Timer</h1>
+        </header>
+        <div className="container mt-5">
+          <Pomodoro />
+        </div>
       </div>
     </div>
   );
