@@ -36,4 +36,9 @@ Of note, stopping a session will always return the application to the initial sc
 
 ## Technology
 ### Built with:
-- React, JavaScript, HTML, CSS, Google Fonts, Bootstrap 4, and Open-Iconic icons.
+- JavaScript, React, HTML, CSS, Bootstrap, Google Fonts, and Open Iconic icons.
+
+## Installation
+1. Fork and clone this repository.
+2. Run `npm install` to install project dependencies.
+3. Run `npm run start` to start the project.
